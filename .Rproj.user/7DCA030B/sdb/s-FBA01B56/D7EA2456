@@ -1,0 +1,16 @@
+{
+    "contents" : "\n# This is the server logic for a Shiny web application.\n# You can find out more about building applications with Shiny here:\n# \n# http://www.rstudio.com/shiny/\n#\n\nlibrary(shiny)\n\nshinyServer(function(input, output) {\n  \n    m <- reactive({if (input$petal.length < 2.4)\n    {\n        x <- \"Setosa\"\n    } else if (input$petal.width < 1.8) {\n        x <- \"Versicolor\"\n    } else {\n        x <- \"Virginica\"\n    }\n    })\n    \n    output$species.text <-  renderText({m()})\n})\n",
+    "created" : 1421542882020.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "40926916",
+    "id" : "D7EA2456",
+    "lastKnownWriteTime" : 1421545568,
+    "path" : "~/Coursera/Developing Data Products/Shiny_Iris/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,16 @@
+{
+    "contents" : "library(caret)\n\n#Cross validation\nset.seed(8)\nintrain = createDataPartition(iris$Species, p = 0.75,list=FALSE)   #partition 75% of training data for training\ntraining = iris[intrain,]\ntesting = iris[-intrain,]\n\n#Generate Basic Prediction Tree\nmodFit <- train(Species ~.,method=\"rpart\",data=iris)\n\n#Draw tree\nlibrary(rattle)\nfancyRpartPlot(modFit$finalModel,sub=\"RPart Decision Tree for Iris Species\")\n\n#Generate Confusion Matrix\npred <- predict(modFit,testing)\nconfusion_matrix <- table(pred,testing$Species)\nconfusionMatrix(confusion_matrix)",
+    "created" : 1421542907972.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3571643639",
+    "id" : "C62B5FAC",
+    "lastKnownWriteTime" : 1421580416,
+    "path" : "~/Coursera/Developing Data Products/Course Project/course_project.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

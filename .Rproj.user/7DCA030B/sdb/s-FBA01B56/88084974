@@ -1,0 +1,16 @@
+{
+    "contents" : "\n# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n# \n# http://www.rstudio.com/shiny/\n#\n\nlibrary(shiny)\n\nshinyUI(pageWithSidebar(\n  \n  # Application title\n  headerPanel(\"Iris Species Identifier\"),\n  \n  # Sidebar with a slider input for number of bins\n  sidebarPanel(\n    sliderInput(\"petal.length\",\n                \"Petal Length:\",\n                min = 1,\n                max = 7,\n                value = 4,\n                step = 0.1),\n    sliderInput(\"petal.width\",\n                \"Petal Width:\",\n                min = 0.1,\n                max = 2.5,\n                value = 1.3,\n                step = 0.1),\n    img(src=\"tree.png\", height = 741, width = 437)\n  ),\n  \n  # Show a plot of the generated distribution\n  mainPanel(\n      h3(p('Iris Species')),\n      textOutput('species.text')\n  )\n))\n",
+    "created" : 1421542881505.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3530554185",
+    "id" : "88084974",
+    "lastKnownWriteTime" : 1421580001,
+    "path" : "~/Coursera/Developing Data Products/Shiny_Iris/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
